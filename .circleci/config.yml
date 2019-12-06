@@ -48,7 +48,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            cd tests; df -h . ; pytest
+            cd tests; pytest --junitxml=~/test-reports
 
       - store_artifacts:
           path: test-reports
