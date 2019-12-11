@@ -11,4 +11,7 @@ before_install:
 jobs:
   include:
     - stage: unit_test
+      branches:
+        only:
+	- master
       script: docker run -v `pwd`:/data -w /data/tests jkern337/py2:latest /bin/bash -c "source /root/.bashrc && pytest"
