@@ -8,4 +8,4 @@ before_install:
 - docker ps -a
 
 script: 
-- docker run -v `pwd`:/data -w /data/tests jkern337/py3:latest /bin/bash -c "source /root/.bashrc && pytest"
+- docker run -v `pwd`/AUT:/data -w /data/tests jkern337/py2:latest /bin/bash -c "source /root/.bashrc && pytest"
