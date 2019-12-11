@@ -5,8 +5,10 @@ services:
 
 before_install:
 - docker pull jkern337/py2:latest
-- docker ps -a
 - ls -la
 
-script: 
-- docker run -v `pwd`:/data -w /data/tests jkern337/py2:latest /bin/bash -c "source /root/.bashrc && pytest"
+
+jobs:
+  include:
+    - stage: unit_test
+      script: docker run -v `pwd`:/data -w /data/tests jkern337/py2:latest /bin/bash -c "source /root/.bashrc && pytest"
