@@ -1,4 +1,6 @@
-lang: python 
+lang: python
+git:
+  clone: false
 install:
 -  git clone --depth=50 https://github.com/kern3020/AUT.git source
 
