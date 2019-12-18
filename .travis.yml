@@ -1,6 +1,6 @@
 
 addons:
-  ssh_known_hosts: git.example.com
+  ssh_known_hosts: github.com
 
 git:
   clone: false
