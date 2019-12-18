@@ -1,10 +1,4 @@
-
-addons:
-  ssh_known_hosts: github.com
-
-git:
-  clone: false
-
+lang: python 
 install:
 - git clone git@github.com:kern3020/AUT.git source
 
