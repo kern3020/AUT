@@ -16,4 +16,4 @@ env:
 jobs:
   include:
     - stage: unit_test
-      script: ls -la
+      script: ls -la; env
