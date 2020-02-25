@@ -18,7 +18,7 @@ pipeline {
                 conda info -a
 
                 conda init bash
-                conda env create -f envs/conda-pequeno.py
+                conda env create -f envs/conda-pequeno.yml
                 '''
             }
         }
