@@ -14,8 +14,8 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts artifacts: '${WORKSPACE}/reports/results.xml', fingerprint: true
-                    junit  '${WORKSPACE}/reports/results.xml', fingerprint: true }
+                    archiveArtifacts artifacts: 'tests/reports/results.xml', fingerprint: true
+                    junit  'tests/reports/results.xml'}
             }
         }	
         stage('build') {
