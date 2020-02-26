@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    trigger {
+    triggers {
         cron('5 6 * * 1-5')
     }
     environment {
