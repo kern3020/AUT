@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'custom'
+            any
             customWorkspace 'source'
         }
     }
