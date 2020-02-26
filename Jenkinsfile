@@ -1,11 +1,11 @@
 pipeline {
-
+    agent any
     triggers {
         cron('5 6 * * 1-5')
     }
 
     options {
-        checkoutToSubdirectory: "source"
+        checkoutToSubdirectory("source")
     }
     environment {
         PATH = "/mnt/discovery/tools/conda/bin:$PATH"
