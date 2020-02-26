@@ -1,14 +1,12 @@
 pipeline {
-    agent {
-        node {
-            any
-            customWorkspace 'source'
-        }
-    }
+
     triggers {
         cron('5 6 * * 1-5')
     }
 
+    options {
+        checkoutToSubdirectory: "source"
+    }
     environment {
         PATH = "/mnt/discovery/tools/conda/bin:$PATH"
     }
