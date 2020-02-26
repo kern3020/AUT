@@ -14,12 +14,14 @@ pipeline {
     }
     stages {
         stage("setup worksapce") {
-            sh'''#!/usr/bin/env bash
-            # create well known directories
+            steps {
+                sh'''#!/usr/bin/env bash
+                # create well known directories
 
-            # create well known links
+                # create well known links
 
-            '''
+                '''
+            }
         }
         stage('pytest') {
             steps {
