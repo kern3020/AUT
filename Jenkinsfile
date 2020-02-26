@@ -14,7 +14,8 @@ pipeline {
             }
             post {
                 always {
-                    junit allowEmptyResults: true, testResults: '${WORKSPACE}/reports/results.xml', fingerprint: true }
+                    archiveArtifacts artifacts: '${WORKSPACE}/reports/results.xml', fingerprint: true
+                    junit  '${WORKSPACE}/reports/results.xml', fingerprint: true }
             }
         }	
         stage('build') {
