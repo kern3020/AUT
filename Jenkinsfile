@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    trigger {
+        cron('5 6 * * 1-5')
+    }
     environment {
         PATH = "/mnt/discovery/tools/conda/bin:$PATH"
     }
