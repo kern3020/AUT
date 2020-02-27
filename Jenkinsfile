@@ -17,7 +17,9 @@ pipeline {
 
     stages {
         stage("present branch") {
-            echo BRANCH_NAME
+            steps {
+                echo BRANCH_NAME
+            }
         }
         stage('pytest') {
             steps {
