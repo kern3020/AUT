@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent 'pico'
     triggers {
         cron('5 6 * * 1-5')
     }
@@ -10,16 +10,10 @@ pipeline {
     environment {
         PATH = "/mnt/discovery/tools/conda/bin:$PATH"
     }
+
     stages {
-        stage("setup worksapce") {
-            steps {
-                sh'''#!/usr/bin/env bash
-                # create well known directories
-
-                # create well known links
-
-                '''
-            }
+        stage("present branch") {
+            echo BRANCH_NAME
         }
         stage('pytest') {
             steps {
