@@ -1,5 +1,9 @@
 pipeline {
-    agent 'pico'
+    agent {
+        node{
+            label 'pico'
+        }
+    }
     triggers {
         cron('5 6 * * 1-5')
     }
